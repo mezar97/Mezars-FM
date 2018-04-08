@@ -31,7 +31,7 @@ LastFM.renderTracks = function(tracks) {
 
 LastFM.searchLastByTitle = function(title) {
   $.ajax({
-    url: 'http://ws.audioscrobbler.com/2.0/?method=track.search&track=' + title + '&api_key=' + API_KEY + '&format=json',
+    url: 'https://ws.audioscrobbler.com/2.0/?method=track.search&track=' + title + '&api_key=' + API_KEY + '&format=json',
     success: function(response) {
       LastFM.renderTracks(response.results.trackmatches.track);
     }
